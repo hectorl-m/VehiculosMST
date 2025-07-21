@@ -69,14 +69,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const matricula = matriculaInput.value.trim();
     const descripcion = descripcionInput.value.trim();
 
-    const regexMatricula = /^[0-9]{4}[A-Z]{3}$/i;
+    // Acepta 1234ABC o A1234BC
+    const regexMatricula = /^(\d{4}[A-Z]{3}|[A-Z]{1}\d{4}[A-Z]{2})$/i;
+
     if (!modelo || !matricula) {
       alert("Por favor completa el modelo y la matrícula.");
       return;
     }
 
     if (!regexMatricula.test(matricula)) {
-      alert("La matrícula debe tener el formato 1234ABC.");
+      alert("La matrícula debe tener el formato 1234ABC o A1234BC.");
       return;
     }
 
