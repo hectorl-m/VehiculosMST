@@ -85,6 +85,7 @@ button:hover {
   padding: 6px;
   font-size: 16px;
   box-shadow: none;
+  border: 1px solid #333;
 }
 
 .vehicle-item button:hover {
@@ -166,19 +167,18 @@ button:hover {
 @media (max-width: 600px) {
   body {
     padding: 10px;
-    font-size: 16px; /* Texto un poco más grande para mejor lectura */
   }
 
   .popup-content {
-    width: 90vw; /* Ocupa casi todo el ancho de pantalla */
+    width: 85vw; /* Ocupa casi todo el ancho de pantalla */
     padding: 20px;
   }
 
   button {
     padding: 12px 18px;
-    font-size: 18px;
     margin: 8px 0 8px 0;
-    width: 100%; /* Botones más grandes y fáciles de tocar */
+    width: 100%;
+    font-size: medium;
   }
 
   #vehicleList {
@@ -188,8 +188,8 @@ button:hover {
 
   .vehicle-item {
     flex-direction: column;
-    align-items: flex-start;
     padding: 15px;
+    align-items: center;
   }
 
   .vehicle-item span {
@@ -201,5 +201,6 @@ button:hover {
     padding: 8px;
     font-size: 20px;
     margin-right: 10px;
+    width: 40%;
   }
 }
