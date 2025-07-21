@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Gestión de Vehículos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Gestión de Vehículos MST</h1>
+
+  <button id="addBtn">➕ Agregar Vehículo</button>
+  <button id="downloadBtn">📥 Descargar JSON</button>
+  <button id="uploadBtn">📤 Cargar JSON</button>
+  <input type="file" id="fileInput" accept=".json" style="display: none;" />
+
+  <h2>Lista de Vehiculos:</h2>
+  <label for="searchInput">Buscar: </label>
+  <input type="text" id="searchInput" placeholder="Buscar por modelo o matrícula" style="width: 100%; max-width: 300px; margin-bottom: 10px; padding: 6px; border-radius: 5px; border: 1px solid #ccc;">
+  <div id="vehicleList"></div>
+
+  <!-- Pop-up -->
+  <div id="popup" class="hidden" data-edit-index="">
+    <div class="popup-content">
+      <h2 id="popupTitle">Nuevo Vehículo</h2>
+      <label>Modelo: <input type="text" id="modelo" /></label><br>
+      <label>Matrícula: <input type="text" id="matricula" /></label><br>
+      <label for="descripcion">Descripción (opcional):</label><br>
+      <textarea id="descripcion" placeholder="Ej: no arranca, ruidos extraños, cambio de aceite..."style="width: 100%; max-width: 300px; height: 150px;"></textarea>
+
+      <button id="saveBtn">Guardar</button>
+      <button id="closeBtn">Cancelar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
