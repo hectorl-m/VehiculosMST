@@ -168,6 +168,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  // Para que con "Enter" se guarde
+  /*
   modeloInput.addEventListener("keydown", e => {
     if (e.key === "Enter") guardarVehiculo();
   });
@@ -181,6 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
   searchInput.addEventListener("input", () => {
     cargarVehiculos(searchInput.value);
   });
+  */
 
   cargarVehiculos();
 });
